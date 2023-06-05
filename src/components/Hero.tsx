@@ -31,10 +31,10 @@ export default function Hero() {
   const animationRef = React.useRef<LottieRefCurrentProps>(null);
 
   return (
-    <div className="flex flex-col justify-center items-center p-8 text-primary sm:p-12 sm:items-start">
-      <div className="flex items-center gap-4 mb-2 font-extrabold xs:text-lg">
+    <div className="flex flex-col justify-center items-center p-8 text-primary xs:p-10 sm:p-14 xs:items-start md:p-20">
+      <div className="flex items-center gap-4 mb-2 text-lg font-extrabold sm:text-xl">
         <LineSVG
-          styles="hidden sm:block"
+          styles="hidden xs:block"
           color="#222"
           thickness="6px"
           length={50}
@@ -42,14 +42,17 @@ export default function Hero() {
         <h2>Harlon Garcia</h2>
       </div>
       <LineSVG
-        styles="mb-2 sm:hidden"
+        styles="mb-2 xs:mb-4 xs:hidden"
         color="#222"
         thickness="6px"
         length={200}
       />
-      <div className="flex mb-3">
-        <h1 className="text-3xl font-black leading-8 xs:text-4xl sm:text-6xl">
-          Software <br className="xs:hidden sm:block" />
+      <div className="flex mb-3 xs:mb-5">
+        <h1
+          className="text-center text-4xl font-black leading-8 xs:text-left xs:text-5xl sm:text-6xl
+        md:text-7xl"
+        >
+          Software <br className="hidden xs:block" />
           Developer
         </h1>
         <Lottie

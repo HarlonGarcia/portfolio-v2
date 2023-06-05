@@ -8,9 +8,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        mesh: "radial-gradient(at 37% 0%, hsla(300,0%,95%,1) 0px, transparent 50%), radial-gradient(at 100% 51%, hsla(213,100%,69%,0.3) 0px, transparent 50%), radial-gradient(at 0% 89%, hsla(213,81%,55%,0.5) 0px, transparent 50%)",
       },
       colors: {
         primary: {
@@ -21,7 +19,10 @@ module.exports = {
           DEFAULT: "var(--color-highlight)",
           dark: "var(--color-highlight-dark)",
         },
-        base: "var(--color-base)",
+        neutral: {
+          DEFAULT: "var(--color-neutral)",
+          blue: "var(--color-neutral-blue)",
+        },
       },
       screens: {
         xs: "566px",
@@ -30,6 +31,9 @@ module.exports = {
         lg: "1024px",
         xl: "1280px",
         "2xl": "1536px",
+      },
+      perspective: {
+        1: "1px",
       },
     },
   },
