@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import { AiOutlineCaretRight } from "react-icons/ai";
 import { FaLinkedin, FaGithub, FaDiscord } from "react-icons/fa";
@@ -11,7 +11,7 @@ interface SidebarProps {
 
 export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
   return (
-    <div className="flex h-screen fixed">
+    <div className="flex h-screen fixed z-20">
       <div
         className={`flex justify-between bg-primary text-white w-16 flex-shrink-0 transition-all duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "-translate-x-[85%]"
