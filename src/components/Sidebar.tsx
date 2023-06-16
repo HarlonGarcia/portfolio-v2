@@ -13,7 +13,7 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
   return (
     <div className="flex h-screen fixed z-20">
       <div
-        className={`flex justify-between bg-primary text-white w-16 flex-shrink-0 transition-all duration-300 ease-in-out ${
+        className={`flex justify-between bg-primary-dark text-white w-16 flex-shrink-0 transition-all duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "-translate-x-[85%]"
         }`}
       >
@@ -43,7 +43,7 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
         </div>
         <button>
           <AiOutlineCaretRight
-            className={`absolute top-1/2 -translate-y-1/2 -right-5 w-8 h-8 flex justify-center items-center text-primary rounded-full
+            className={`absolute top-1/2 -translate-y-1/2 -right-5 w-8 h-8 flex justify-center items-center text-primary-dark rounded-full
           transition-all duration-300 ease-in-ou
           ${isOpen ? "-translate-x-1" : "translate-x-0"}`}
             onClick={() => setIsOpen(!isOpen)}

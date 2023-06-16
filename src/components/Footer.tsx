@@ -3,7 +3,7 @@ import { FaLinkedin, FaGithub, FaDiscord } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="w-full flex flex-col items-center p-8 bg-primary">
+    <footer className="w-full flex flex-col items-center p-8 bg-primary-dark">
       <div className="flex flex-col items-center gap-1 mb-6 text-center text-sm">
         <p className="mb-2 text-white/30">
           Este site foi feito com NextJS e TailwindCSS

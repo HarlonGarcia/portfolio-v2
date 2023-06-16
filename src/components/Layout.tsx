@@ -13,7 +13,7 @@ export default function Layout({ children }: LayoutProps) {
       <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
       <div
         className={`flex flex-col min-h-screen bg-base transition-all duration-300 ease-in-out
-        ${isOpen ? "ml-16" : "ml-2"}`}
+        ${isOpen ? "ml-16" : "duration-0 ml-2"}`}
       >
         {children}
       </div>
