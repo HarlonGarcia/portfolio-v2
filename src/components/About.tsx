@@ -1,12 +1,17 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 import { MdExpandMore } from "react-icons/md";
 
 export default function About() {
   const [isExpanded, setIsExpanded] = React.useState(false);
 
   return (
-    <div className="border-collapse flex flex-col items-center p-6 py-8 text-primary bg-neutral-blue bg-mesh xs:items-start xs:p-10 sm:p-14 md:p-20">
+    <motion.div
+      className="border-collapse flex flex-col items-center p-6 py-8 text-primary bg-neutral-blue bg-mesh xs:items-start xs:p-10 sm:p-14 md:p-20"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
       <h2 className="mb-4 font-extrabold xs:text-lg md:text-xl">
         Sobre mim...
       </h2>
@@ -36,6 +41,6 @@ export default function About() {
           <strong>#OpenToWork</strong>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

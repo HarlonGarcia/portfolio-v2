@@ -13,7 +13,11 @@ export default function Timeline() {
     after:left-[calc(50%_-_2px)] after:w-1 after:h-full after:bg-highlight md:p-2"
       >
         {projectsData.map((project, index) => (
-          <TimelineItem key={project.title + index.toString()} data={project} />
+          <TimelineItem
+            key={project.title + index.toString()}
+            data={project}
+            translateValue={index % 2 == 0 ? 400 : -400}
+          />
         ))}
       </div>
     </div>

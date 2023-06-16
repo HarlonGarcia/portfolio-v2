@@ -2,24 +2,40 @@ import React from "react";
 
 import { Project } from "@/types/Project";
 import { FaGithub, FaLink } from "react-icons/fa";
+import { useInView } from "framer-motion";
 
 interface TimelineItemProps {
   data: Project;
+  translateValue: number;
 }
 
-export default function TimelineItem({ data }: TimelineItemProps) {
+export default function TimelineItem({
+  data,
+  translateValue,
+}: TimelineItemProps) {
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
-    <div className="group relative flex justify-end pr-[30px] my-2 w-1/2 odd:self-end odd:justify-start odd:pl-[30px] odd:pr-0">
+    <div
+      ref={ref}
+      className="group relative flex justify-end pr-[30px] my-2 w-1/2 odd:self-end odd:justify-start odd:pl-[30px] odd:pr-0"
+    >
+      <div
+        className="absolute top-[calc(50%_-_10px)] -right-2.5 w-5 h-5 z-20 
+    p-1 bg-neutral border-highlight border-2 rounded-full group-odd:right-auto group-odd:-left-2.5"
+      ></div>
       <div
         className="card-body card card-compact bg-neutral shadow-to-r shadow-slate-900/10 transition-all duration-500 ease-in-out
         after:content-[' '] after:absolute after:-right-2 after:top-[calc(50%_-_8px)] after:w-4 
         after:h-4 after:rotate-45 after:bg-neutral hover:shadow-slate-900/20 group-odd:shadow-to-l group-odd:hover:shadow-slate-900/20 group-odd:after:right-auto
         group-odd:after:-left-2"
+        style={{
+          transform: isInView ? "none" : `translateX(${translateValue}px)`,
+          opacity: isInView ? 1 : 0,
+          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+        }}
       >
-        <div
-          className="absolute top-[calc(50%_-_10px)] -right-10 w-5 h-5 z-20 
-      p-1 bg-neutral border-highlight border-2 rounded-full group-odd:right-auto group-odd:-left-10"
-        ></div>
         <h2 className="card-title mb-0 text-primary font-black">
           {data.title}
         </h2>

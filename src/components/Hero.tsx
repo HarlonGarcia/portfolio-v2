@@ -1,8 +1,10 @@
 import React from "react";
 import Lottie, { LottieRefCurrentProps } from "lottie-react";
-import animationData from "../../public/assets/wow-emoji.json";
 import Typed from "typed.js";
+import { motion } from "framer-motion";
 import { MdCommit } from "react-icons/md";
+
+import animationData from "../../public/assets/wow-emoji.json";
 
 const LineSVG = ({
   styles = "block",
@@ -31,11 +33,17 @@ const LineSVG = ({
 
 export default function Hero() {
   const animationRef = React.useRef<LottieRefCurrentProps>(null);
-  const el = React.useRef<HTMLLIElement>(null);
+  const typedEl = React.useRef<HTMLLIElement>(null);
 
   React.useEffect(() => {
-    const typed = new Typed(el.current || "", {
-      strings: ["Fullstack", "Backend", "Frontend", "Software", "Web"],
+    const typed = new Typed(typedEl.current, {
+      strings: [
+        "&#8205;Fullstack",
+        "&#8205;Backend",
+        "&#8205;Frontend",
+        "&#8205;Software",
+        "&#8205;Web",
+      ],
       smartBackspace: true,
       typeSpeed: 100,
       backSpeed: 50,
@@ -49,7 +57,12 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className="relative flex flex-col justify-center items-center p-8 text-primary xs:p-10 sm:p-14 xs:items-start md:p-20">
+    <motion.div
+      className="relative flex flex-col justify-center items-center p-8 text-primary xs:p-10 sm:p-14 xs:items-start md:p-20"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="flex items-center gap-4 mb-2 text-lg font-extrabold sm:text-xl">
         <LineSVG
           styles="hidden xs:block"
@@ -70,7 +83,7 @@ export default function Hero() {
           className="text-center text-4xl font-semibold leading-8 xs:text-left xs:text-5xl sm:text-6xl
         md:text-7xl"
         >
-          <li ref={el} className="inline-block"></li>
+          <li ref={typedEl} className="inline-block"></li>
           <li className="font-black">Developer</li>
         </ul>
         <Lottie
@@ -108,6 +121,6 @@ export default function Hero() {
           length={150}
         />
       </div>
-    </div>
+    </motion.div>
   );
 }

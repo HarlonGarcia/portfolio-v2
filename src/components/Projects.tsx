@@ -1,22 +1,52 @@
 import React from "react";
 import { Inter } from "next/font/google";
+import { motion } from "framer-motion";
+import { FaGithub, FaLink } from "react-icons/fa";
 
 import { projectsData } from "@/utils/projects";
-import { FaGithub, FaLink } from "react-icons/fa";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const container = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const item = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+};
+
 export default function Projects() {
   return (
-    <section
+    <motion.section
       className={`p-8 bg-neutral xs:p-10 sm:hidden sm:p-14 md:p-20 ${inter.className}`}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
     >
       <h2 className="mb-4 text-md font-bold">Meu projetos mais recentes</h2>
-      <div className="flex flex-col gap-4 mb-4">
+      <motion.div
+        className="flex flex-col gap-4 mb-4"
+        variants={container}
+        initial="hidden"
+        animate="visible"
+      >
         {projectsData.map((project, index) => (
-          <div
+          <motion.div
             key={index}
             className="p-1 collapse collapse-arrow bg-neutral shadow-sm shadow-slate-900/25"
+            variants={item}
           >
             <input type="radio" name="my-accordion-2" />
             <div className="flex justify-between collapse-title font-medium">
@@ -49,9 +79,9 @@ export default function Projects() {
             <div className="collapse-content">
               <p className="text-sm">{project.description}</p>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 }
