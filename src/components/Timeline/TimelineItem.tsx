@@ -56,7 +56,7 @@ export default function TimelineItem({
           </div>
           <div className="flex gap-1 md:gap-2">
             {data.links?.github ? (
-              <button className="flex justify-center items-center w-8 h-8 p-0 text-highlight bg-primary-dark rounded-full">
+              <button className="flex justify-center items-center w-8 h-8 p-0 text-highlight bg-primary-dark rounded-full cursor-default">
                 <a
                   href={data.links.github}
                   target="_blank"
@@ -67,7 +67,7 @@ export default function TimelineItem({
               </button>
             ) : null}
             {data.links?.app ? (
-              <button className="flex justify-center items-center w-8 h-8 p-1.5 text-highlight bg-primary-dark rounded-full">
+              <button className="flex justify-center items-center w-8 h-8 p-1.5 text-highlight bg-primary-dark rounded-full cursor-default">
                 <a
                   href={data.links.app}
                   target="_blank"
