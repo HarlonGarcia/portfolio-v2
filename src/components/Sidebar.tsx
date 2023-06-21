@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 import { AiOutlineCaretRight } from "react-icons/ai";
 import { FaLinkedin, FaGithub, FaDiscord } from "react-icons/fa";
@@ -10,6 +11,14 @@ interface SidebarProps {
 }
 
 export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
+  const { i18n } = useTranslation();
+
+  const toggleLanguage = () => {
+    i18n.language === "ptBR"
+      ? i18n.changeLanguage("en")
+      : i18n.changeLanguage("ptBR");
+  };
+
   return (
     <div className="flex h-screen fixed z-20">
       <div
@@ -37,7 +46,7 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
               <FaDiscord className="w-6 h-6 transition-all duration-300 ease-in-out hover:text-highlight-dark group-hover:-translate-y-0.5" />
             </a>
           </div>
-          <button className="group text-highlight">
+          <button className="group text-highlight" onClick={toggleLanguage}>
             <HiTranslate className="w-6 h-6 transition-all duration-300 ease-in-out hover:text-highlight-dark" />
           </button>
         </div>

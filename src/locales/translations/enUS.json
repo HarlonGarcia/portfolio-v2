@@ -1,0 +1,24 @@
+{
+  "translation": {
+    "about": {
+      "title": "About me...",
+      "description": {
+        "1": "My name is Harlon. I started my career as a graphic designer, where I worked for 2 years. However, my passion for programming led me to make a career transition, and since 2021 I have been studying and working with",
+        "2": "I'm excited to apply my combination of design and programming skills, which allows me to create creative and functional solutions."
+      },
+      "status": "Currently working as"
+    },
+    "projects": {
+      "title": "My recent projects",
+      "breadcrumbs": {
+        "documents": "Documents",
+        "project": "Personal Projects",
+        "recent": "Recent"
+      }
+    },
+    "footer": {
+      "info": "This website was developed and designed using NextJS and TailwindCSS"
+    },
+    "connector": "and"
+  }
+}

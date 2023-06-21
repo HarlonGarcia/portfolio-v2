@@ -1,6 +1,7 @@
 import React from "react";
 import { Inter } from "next/font/google";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import { FaGithub, FaLink } from "react-icons/fa";
 
 import { projectsData } from "@/utils/projects";
@@ -28,6 +29,8 @@ const item = {
 };
 
 export default function Projects() {
+  const { t } = useTranslation();
+
   return (
     <motion.section
       className={`p-8 bg-neutral xs:p-10 sm:hidden sm:p-14 md:p-20 ${inter.className}`}
@@ -35,7 +38,7 @@ export default function Projects() {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <h2 className="mb-4 text-md font-bold">Meu projetos mais recentes</h2>
+      <h2 className="mb-4 text-md font-bold">{t("projects.title")}</h2>
       <motion.div
         className="flex flex-col gap-4 mb-4"
         variants={container}
