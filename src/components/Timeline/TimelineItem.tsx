@@ -1,9 +1,9 @@
 import React from "react";
+import { useInView } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import { FaGithub, FaLink } from "react-icons/fa";
 
 import { Project } from "@/types/Project";
-import { FaGithub, FaLink } from "react-icons/fa";
-import { useInView } from "framer-motion";
-
 interface TimelineItemProps {
   data: Project;
   translateValue: number;
@@ -15,6 +15,7 @@ export default function TimelineItem({
 }: TimelineItemProps) {
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: true });
+  const { i18n } = useTranslation();
 
   return (
     <div
@@ -39,7 +40,9 @@ export default function TimelineItem({
         <h2 className="card-title mb-0 text-primary font-black">
           {data.title}
         </h2>
-        <p className="mb-2 text-primary font-semibold">{data.description}</p>
+        <p className="mb-2 text-primary font-semibold">
+          {i18n.language === "ptBR" ? data.description.pt : data.description.en}
+        </p>
         <div className="card-actions justify-between items-center">
           <div className="hidden md:block">
             {data.tags.map((tag, index) => (

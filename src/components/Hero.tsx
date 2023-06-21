@@ -66,11 +66,11 @@ export default function Hero() {
       <div className="flex items-center gap-4 font-extrabold text-sm xs:text-lg">
         <ul className="flex items-center gap-1 text-center">
           <li>ReactJS</li>
-          <li>
+          <li className="text-highlight-dark">
             <MdCommit className="h-5 w-5 sm:h-6 sm:w-6" />
           </li>
           <li>Java</li>
-          <li>
+          <li className="text-highlight-dark">
             <MdCommit className="h-5 w-5 sm:h-6 sm:w-6" />
           </li>
           <li>NodeJS</li>

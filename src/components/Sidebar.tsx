@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { AiOutlineCaretRight } from "react-icons/ai";
 import { FaLinkedin, FaGithub, FaDiscord } from "react-icons/fa";
 import { HiTranslate } from "react-icons/hi";
+import { MdLightMode } from "react-icons/md";
 
 interface SidebarProps {
   isOpen: boolean;

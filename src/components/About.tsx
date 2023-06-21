@@ -50,7 +50,9 @@ export default function About() {
         </button>
       </div>
       <div className="flex flex-col items-center xs:items-start">
-        <small className="mb-2 text-sm font-bold">{t("about.status")}</small>
+        <small className="mb-2 text-center text-sm font-bold">
+          {t("about.status")}
+        </small>
         <strong className="py-1 px-2 text-xs text-highlight bg-primary-dark rounded shadow-lg shadow-highlight xs:hidden">
           Python Developer
         </strong>

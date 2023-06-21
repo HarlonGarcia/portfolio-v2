@@ -1,18 +1,13 @@
 import React from "react";
-import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 export default function ThemeSwitcher() {
   return (
     <select
-      className="select select-sm absolute z-10 top-5 right-5 w-32 bg-neutral shadow-md focus:outline-none"
+      className="select select-sm absolute z-10 top-2 right-2 w-24 bg-neutral shadow-md focus:outline-none xs:top-5 xs:right-5 xs:w-32"
       data-choose-theme
     >
-      <option value="" className="flex">
-        Light
-      </option>
-      <option value="dracula" className="flex">
-        Dracula
-      </option>
+      <option value="">Light</option>
+      <option value="dracula">Dracula</option>
     </select>
   );
 }

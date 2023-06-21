@@ -5,7 +5,7 @@ export default function Breadcrumbs() {
   const { t } = useTranslation();
 
   return (
-    <div className="w-fit breadcrumbs py-2 px-4 mb-10 text-sm text-primary bg-gradient-to-r from-neutral-blue rounded-md">
+    <div className="w-fit breadcrumbs py-2 px-4 mb-10 text-sm text-primary-dark bg-gradient-to-r from-highlight rounded-md">
       <ul>
         <li>
           <svg

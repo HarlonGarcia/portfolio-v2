@@ -29,11 +29,11 @@ const item = {
 };
 
 export default function Projects() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return (
     <motion.section
-      className={`p-8 bg-neutral xs:p-10 sm:hidden sm:p-14 md:p-20 ${inter.className}`}
+      className={`flex flex-col items-center p-8 bg-neutral xs:p-10 sm:hidden sm:p-14 md:p-20 ${inter.className} xs:items-start`}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -56,7 +56,7 @@ export default function Projects() {
               <h2>{project.title}</h2>
               <div className="flex gap-2">
                 {project.links.github ? (
-                  <button className="z-10 flex justify-center items-center w-5 h-5 p-3 text-highlight bg-primary rounded-full">
+                  <button className="z-10 flex justify-center items-center w-5 h-5 p-3 text-highlight bg-primary-dark rounded-full">
                     <a
                       href={project.links.github}
                       target="_blank"
@@ -67,7 +67,7 @@ export default function Projects() {
                   </button>
                 ) : null}
                 {project.links.app ? (
-                  <button className="z-10 flex justify-center items-center w-5 h-5 p-3 text-highlight bg-primary rounded-full">
+                  <button className="z-10 flex justify-center items-center w-5 h-5 p-3 text-highlight bg-primary-dark rounded-full">
                     <a
                       href={project.links.app}
                       target="_blank"
@@ -80,7 +80,11 @@ export default function Projects() {
               </div>
             </div>
             <div className="collapse-content">
-              <p className="text-sm">{project.description}</p>
+              <p className="text-sm">
+                {i18n.language == "ptBR"
+                  ? project.description.pt
+                  : project.description.en}
+              </p>
             </div>
           </motion.div>
         ))}
