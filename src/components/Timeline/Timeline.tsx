@@ -10,7 +10,7 @@ export default function Timeline() {
       <Breadcrumbs />
       <div
         className="relative flex flex-col after:content-[' '] after:absolute 
-    after:left-[calc(50%_-_2px)] after:w-1 after:h-full after:bg-highlight md:p-2"
+    after:left-[calc(50%_-_2px)] after:w-1 after:h-full after:bg-highlight-dark md:p-2"
       >
         {projectsData.map((project, index) => (
           <TimelineItem

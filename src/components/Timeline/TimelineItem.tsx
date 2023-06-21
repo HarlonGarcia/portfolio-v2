@@ -23,7 +23,7 @@ export default function TimelineItem({
     >
       <div
         className="absolute top-[calc(50%_-_10px)] -right-2.5 w-5 h-5 z-20 
-    p-1 bg-neutral border-highlight border-2 rounded-full group-odd:right-auto group-odd:-left-2.5"
+    p-1 bg-neutral border-highlight-dark border-2 rounded-full group-odd:right-auto group-odd:-left-2.5"
       ></div>
       <div
         className="card-body card card-compact bg-neutral shadow-to-r shadow-slate-900/10 transition-all duration-500 ease-in-out
@@ -45,7 +45,7 @@ export default function TimelineItem({
             {data.tags.map((tag, index) => (
               <span
                 key={tag + index.toString()}
-                className="py-0.5 px-2 mr-2 text-xs text-neutral bg-primary rounded-full"
+                className="py-0.5 px-2 mr-2 text-xs text-neutral-blue bg-primary-dark rounded-full"
               >
                 {tag}
               </span>
@@ -53,7 +53,7 @@ export default function TimelineItem({
           </div>
           <div className="flex gap-1 md:gap-2">
             {data.links?.github ? (
-              <button className="flex justify-center items-center w-8 h-8 p-0 text-highlight bg-primary rounded-full">
+              <button className="flex justify-center items-center w-8 h-8 p-0 text-highlight bg-primary-dark rounded-full">
                 <a
                   href={data.links.github}
                   target="_blank"
@@ -64,7 +64,7 @@ export default function TimelineItem({
               </button>
             ) : null}
             {data.links?.app ? (
-              <button className="flex justify-center items-center w-8 h-8 p-1.5 text-highlight bg-primary rounded-full">
+              <button className="flex justify-center items-center w-8 h-8 p-1.5 text-highlight bg-primary-dark rounded-full">
                 <a
                   href={data.links.app}
                   target="_blank"

@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className="w-full flex flex-col items-center p-8 bg-primary-dark">
       <div className="flex flex-col items-center gap-1 mb-6 text-center text-sm">
-        <p className="mb-2 text-white/30">{t("footer.info")}</p>
+        <p className="mb-2 text-highlight">{t("footer.info")}</p>
         <strong className="text-neutral">Harlon Garcia &copy; 2023</strong>
       </div>
       <div className="flex gap-6 text-highlight">

@@ -1,0 +1,13 @@
+{
+  "workbench.activityBar.visible": true,
+  "workbench.colorTheme": "Dracula",
+  "workbench.preferredDarkColorTheme": "Dracula",
+  "workbench.preferredHighContrastLightColorTheme": "Dracula",
+  "workbench.preferredHighContrastColorTheme": "Dracula",
+  "workbench.preferredLightColorTheme": "Dracula",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.sideBar.location": "left",
+  "workbench.statusBar.visible": true,
+  "workbench.activityBar.iconClickBehavior": "toggle",
+  "window.autoDetectColorScheme": true
+}

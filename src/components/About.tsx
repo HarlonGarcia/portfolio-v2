@@ -9,7 +9,7 @@ export default function About() {
 
   return (
     <motion.section
-      className="border-collapse flex flex-col p-6 py-8 text-primary bg-neutral-blue bg-mesh xs:p-10 sm:p-14 md:p-20"
+      className="border-collapse flex flex-col p-6 py-8 text-primary bg-neutral bg-mesh xs:p-10 sm:p-14 md:p-20"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -23,19 +23,19 @@ export default function About() {
         ${isExpanded ? "line-clamp-none" : "line-clamp-3"}`}
         >
           {t("about.description.1")}{" "}
-          <span className="px-1 mx-0.5 text-xs bg-highlight rounded-sm sm:text-sm md:text-base">
+          <span className="px-1 mx-0.5 text-primary-dark text-xs bg-highlight rounded-sm sm:text-sm md:text-base">
             React
           </span>
           ,{" "}
-          <span className="px-1 mx-0.5 text-xs bg-highlight rounded-sm sm:text-sm md:text-base">
+          <span className="px-1 mx-0.5 text-primary-dark text-xs bg-highlight rounded-sm sm:text-sm md:text-base">
             Node
           </span>
           ,{" "}
-          <span className="px-1 mx-0.5 text-xs bg-highlight rounded-sm sm:text-sm md:text-base">
+          <span className="px-1 mx-0.5 text-primary-dark text-xs bg-highlight rounded-sm sm:text-sm md:text-base">
             Java
           </span>{" "}
           {t("connector")}{" "}
-          <span className="px-1 mx-0.5 text-xs bg-highlight rounded-sm sm:text-sm md:text-base">
+          <span className="px-1 mx-0.5 text-primary-dark text-xs bg-highlight rounded-sm sm:text-sm md:text-base">
             Python
           </span>
           . {t("about.description.2")}
@@ -51,13 +51,13 @@ export default function About() {
       </div>
       <div className="flex flex-col items-center xs:items-start">
         <small className="mb-2 text-sm font-bold">{t("about.status")}</small>
-        <strong className="py-1 px-2 text-xs text-highlight bg-primary rounded shadow-lg shadow-highlight xs:hidden">
+        <strong className="py-1 px-2 text-xs text-highlight bg-primary-dark rounded shadow-lg shadow-highlight xs:hidden">
           Python Developer
         </strong>
-        <div className="hidden text-xs font-bold border-2 border-primary rounded-full overflow-hidden xs:flex sm:text-sm">
+        <div className="hidden text-xs font-bold border-2 border-primary-dark rounded-full overflow-hidden xs:flex sm:text-sm">
           <div className="p-2 px-4">Python Developer</div>
-          <div className="flex items-center p-2 px-4 text-highlight bg-primary">
-            <div className="w-1.5 h-1.5 mr-1.5 rounded-[50%] bg-green-600"></div>
+          <div className="flex items-center p-2 px-4 text-highlight bg-primary-dark">
+            <div className="w-1.5 h-1.5 mr-1.5 rounded-[50%] bg-status"></div>
             <strong>#OpenToWork</strong>
           </div>
         </div>

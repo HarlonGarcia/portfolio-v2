@@ -11,6 +11,29 @@
 
   --color-neutral: #f2f2f2;
   --color-neutral-blue: #d7e3f2;
+
+  --color-green: #00b400;
+
+  --mesh-white: hsla(300,0%,95%,1);
+  --mesh-dark: hsla(213,100%,69%,0.3);
+  --mesh-neutral: hsla(213,81%,55%,0.5);
+}
+
+[data-theme='dracula'] {
+  --color-primary: #f8f8f2;
+  --color-primary-dark: #20222b;
+
+  --color-highlight: #bd93f9;
+  --color-highlight-dark: #50fa7b;
+
+  --color-neutral: #282a36;
+  --color-neutral-blue: #6272a4;
+
+  --color-green: #50fa7b;
+
+  --mesh-white: hsla(261,18%,11%,0.3);
+  --mesh-dark: hsla(261,18%,11%,0.3);
+  --mesh-neutral: hsla(261,18%,11%,0.3);
 }
 
 body {

@@ -1,5 +1,6 @@
 import React from "react";
 import Sidebar from "./Sidebar";
+import ThemeSwitcher from "./ThemeSwitcher";
 interface LayoutProps {
   children: React.ReactNode;
 }
@@ -9,6 +10,7 @@ export default function Layout({ children }: LayoutProps) {
 
   return (
     <>
+      <ThemeSwitcher />
       <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
       <div
         className={`flex flex-col min-h-screen bg-base transition-all duration-300 ease-in-out

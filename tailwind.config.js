@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        mesh: "radial-gradient(at 37% 0%, hsla(300,0%,95%,1) 0px, transparent 50%), radial-gradient(at 100% 51%, hsla(213,100%,69%,0.3) 0px, transparent 50%), radial-gradient(at 0% 89%, hsla(213,81%,55%,0.5) 0px, transparent 50%)",
+        mesh: "radial-gradient(at 37% 0%, var(--mesh-white) 0px, transparent 50%), radial-gradient(at 100% 51%, var(--mesh-dark) 0px, transparent 50%), radial-gradient(at 0% 89%, var(--mesh-neutral) 0px, transparent 50%)",
       },
       colors: {
         primary: {
@@ -23,6 +23,9 @@ module.exports = {
           DEFAULT: "var(--color-neutral)",
           blue: "var(--color-neutral-blue)",
         },
+        status: {
+          DEFAULT: "var(--color-green)",
+        }
       },
       screens: {
         xs: "566px",
@@ -45,6 +48,6 @@ module.exports = {
   },
   plugins: [require("daisyui")],
   daisyui: {
-    themes: ["light", "dark", "dracula"],
+    themes: ["light", "dracula"],
   },
 };

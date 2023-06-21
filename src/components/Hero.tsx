@@ -5,31 +5,7 @@ import { motion } from "framer-motion";
 import { MdCommit } from "react-icons/md";
 
 import animationData from "../../public/assets/wow-emoji.json";
-
-const LineSVG = ({
-  styles = "block",
-  color = "black",
-  thickness = "1px",
-  length = 100,
-}) => {
-  return (
-    <svg
-      className={styles}
-      width={length}
-      height={thickness}
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <line
-        x1="0"
-        y1="0"
-        x2={length}
-        y2="0"
-        stroke={color}
-        strokeWidth={thickness}
-      />
-    </svg>
-  );
-};
+import Line from "./Shared/Line";
 
 export default function Hero() {
   const animationRef = React.useRef<LottieRefCurrentProps>(null);
@@ -64,20 +40,10 @@ export default function Hero() {
       transition={{ duration: 0.5 }}
     >
       <div className="flex items-center gap-4 mb-2 text-lg font-extrabold sm:text-xl">
-        <LineSVG
-          styles="hidden xs:block"
-          color="#222"
-          thickness="6px"
-          length={50}
-        />
+        <Line styles="hidden xs:block" thickness="6px" length={50} />
         <h2>Harlon Garcia</h2>
       </div>
-      <LineSVG
-        styles="mb-2 xs:mb-4 xs:hidden"
-        color="#222"
-        thickness="6px"
-        length={200}
-      />
+      <Line styles="mb-2 xs:mb-4 xs:hidden" thickness="6px" length={200} />
       <div className="flex mb-3 xs:mb-5">
         <ul
           className="text-center text-4xl font-semibold leading-8 xs:text-left xs:text-5xl sm:text-6xl
@@ -96,12 +62,7 @@ export default function Hero() {
           animationData={animationData}
         />
       </div>
-      <LineSVG
-        styles="mb-2 sm:hidden"
-        color="#222"
-        thickness="6px"
-        length={200}
-      />
+      <Line styles="mb-2 sm:hidden" thickness="6px" length={200} />
       <div className="flex items-center gap-4 font-extrabold text-sm xs:text-lg">
         <ul className="flex items-center gap-1 text-center">
           <li>ReactJS</li>
@@ -114,12 +75,7 @@ export default function Hero() {
           </li>
           <li>NodeJS</li>
         </ul>
-        <LineSVG
-          styles="hidden sm:block"
-          color="#222"
-          thickness="6px"
-          length={150}
-        />
+        <Line styles="hidden sm:block" thickness="6px" length={150} />
       </div>
     </motion.div>
   );
