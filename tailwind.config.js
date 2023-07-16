@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        mesh: "radial-gradient(at 37% 0%, hsla(300,0%,95%,1) 0px, transparent 50%), radial-gradient(at 100% 51%, hsla(213,100%,69%,0.3) 0px, transparent 50%), radial-gradient(at 0% 89%, hsla(213,81%,55%,0.5) 0px, transparent 50%)",
+        mesh: "var(--mesh-background)",
       },
       colors: {
         primary: {

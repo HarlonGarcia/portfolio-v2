@@ -23,13 +23,13 @@ export default function TimelineItem({ data }: TimelineItemProps) {
         <h2 className="card-title mb-0 text-primary font-black">
           {data.title}
         </h2>
-        <p className="mb-2 text-primary font-semibold">{data.description}</p>
+        <p className="mb-2 text-primary-dark font-semibold">{data.description}</p>
         <div className="card-actions justify-between items-center">
           <div className="hidden md:block">
             {data.tags.map((tag, index) => (
               <span
                 key={tag + index.toString()}
-                className="py-0.5 px-2 mr-2 text-xs text-neutral bg-primary rounded-full"
+                className="py-0.5 px-2 mr-2 text-xs text-neutral-blue bg-primary rounded-full"
               >
                 {tag}
               </span>
@@ -37,7 +37,7 @@ export default function TimelineItem({ data }: TimelineItemProps) {
           </div>
           <div className="flex gap-1 md:gap-2">
             {data.links?.github ? (
-              <button className="flex justify-center items-center w-8 h-8 p-0 text-highlight bg-primary rounded-full">
+              <button className="flex justify-center items-center w-8 h-8 p-0 text-highlight bg-primary-dark rounded-full">
                 <a
                   href={data.links.github}
                   target="_blank"
@@ -48,7 +48,7 @@ export default function TimelineItem({ data }: TimelineItemProps) {
               </button>
             ) : null}
             {data.links?.app ? (
-              <button className="flex justify-center items-center w-8 h-8 p-1.5 text-highlight bg-primary rounded-full">
+              <button className="flex justify-center items-center w-8 h-8 p-1.5 text-highlight bg-primary-dark rounded-full">
                 <a
                   href={data.links.app}
                   target="_blank"

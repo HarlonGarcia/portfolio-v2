@@ -67,7 +67,7 @@ export default function Hero() {
       />
       <div className="flex mb-3 xs:mb-5">
         <ul
-          className="text-center text-4xl font-semibold leading-8 xs:text-left xs:text-5xl sm:text-6xl
+          className="text-primary-dark text-center text-4xl font-semibold leading-8 xs:text-left xs:text-5xl sm:text-6xl
         md:text-7xl"
         >
           <li ref={el} className="inline-block"></li>

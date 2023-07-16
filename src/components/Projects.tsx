@@ -23,7 +23,7 @@ export default function Projects() {
               <h2>{project.title}</h2>
               <div className="flex gap-2">
                 {project.links.github ? (
-                  <button className="z-10 flex justify-center items-center w-5 h-5 p-3 text-highlight bg-primary rounded-full">
+                  <button className="z-10 flex justify-center items-center w-5 h-5 p-3 text-highlight bg-primary-dark rounded-full">
                     <a
                       href={project.links.github}
                       target="_blank"
@@ -34,7 +34,7 @@ export default function Projects() {
                   </button>
                 ) : null}
                 {project.links.app ? (
-                  <button className="z-10 flex justify-center items-center w-5 h-5 p-3 text-highlight bg-primary rounded-full">
+                  <button className="z-10 flex justify-center items-center w-5 h-5 p-3 text-highlight bg-primary-dark rounded-full">
                     <a
                       href={project.links.app}
                       target="_blank"

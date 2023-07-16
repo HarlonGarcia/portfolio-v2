@@ -11,6 +11,23 @@
 
   --color-neutral: #f2f2f2;
   --color-neutral-blue: #d7e3f2;
+
+  --mesh-background: radial-gradient(at 37% 0%, hsla(300,0%,95%,1) 0px, transparent 50%), radial-gradient(at 100% 51%, hsla(213,100%,69%,0.3) 0px, transparent 50%), radial-gradient(at 0% 89%, hsla(213,81%,55%,0.5) 0px, transparent 50%); 
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #bd93f9;
+    --color-primary-dark: #14151b;
+
+    --color-highlight: #ff79c6;
+    --color-highlight-dark: #50fa7b;
+
+    --color-neutral: #282a36;
+    --color-neutral-blue: #12131a;
+
+    --mesh-background: radial-gradient(at 37% 0%, #282a36 0px, transparent 100%), radial-gradient(at 100% 51%, #282a36 0px, transparent 100%), radial-gradient(at 0% 89%, #282a36 0px, transparent 100%);
+  }
 }
 
 body {
